@@ -8,8 +8,11 @@ const Enter: NextPage = () => {
   const [method, setMethod] = useState("email");
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
+  const cls = (...classnames: string[]) => {
+    return classnames.join(" ");
+  };
   return (
-    <div className="bg-purple-200 min-h-screen">
+    <div className="bg-slate-200 min-h-screen">
       <div className="">
         <Link href="/">
           <a className="">👉Main page</a>
@@ -22,23 +25,35 @@ const Enter: NextPage = () => {
             <h5 className="text-gray-700 font-medium text-lg py-5">
               Enter using:
             </h5>
-            <div className="grid grid-cols-2 gap-20 text-xl bg-red-200 border-b-2 w-full border-orange-200">
+            <div className="grid grid-cols-2 gap-20 text-xl ">
               <button
-                className={`font-semibold border-b-2 w-full ${
+                className={cls(
+                  "font-semibold border-b-2 w-full",
                   method === "email"
-                    ? "border-orange-500 text-orange-500 pb-3"
-                    : "border-orange-200"
-                } `}
+                    ? "border-purple-700 text-purple-700 pb-3"
+                    : "border-purple-300 text-purple-300"
+                )}
+                // className={`font-semibold border-b-2 w-full ${
+                //   method === "email"
+                //     ? "border-orange-500 text-orange-500 pb-3"
+                //     : "border-orange-200"
+                // } `}
                 onClick={onEmailClick}
               >
                 Email
               </button>
               <button
-                className={`font-semibold border-b-2 w-full ${
+                className={cls(
+                  "font-semibold border-b-2 w-full",
                   method === "phone"
-                    ? "border-orange-500 text-orange-500 pb-3"
-                    : "border-orange-200"
-                } `}
+                    ? "border-purple-700 text-purple-700 pb-3"
+                    : "border-purple-300 text-purple-300"
+                )}
+                // className={`font-semibold border-b-2 w-full ${
+                //   method === "phone"
+                //     ? "border-orange-500 text-orange-500 pb-3"
+                //     : "border-orange-200"
+                // } `}
                 onClick={onPhoneClick}
               >
                 Phone
