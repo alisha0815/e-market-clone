@@ -61,13 +61,17 @@ const Enter: NextPage = () => {
             </div>
           </div>
           <form className="mt-3">
-            <label className="text-sm font-medium text-gray-700">
+            <label
+              htmlFor="input"
+              className="text-sm font-medium text-gray-700"
+            >
               {method === "email" ? "Email address" : null}
               {method === "phone" ? "Phone number" : null}
             </label>
             <div className="mt-5">
               {method === "email" ? (
                 <input
+                  id="input"
                   type="email"
                   required
                   className="appearance-none w-full border border-gray-400 rounded-xl shadow-md placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
@@ -79,6 +83,7 @@ const Enter: NextPage = () => {
                     +47
                   </span>
                   <input
+                    id="input"
                     type="number"
                     required
                     className="appearance-none w-full border border-gray-400 rounded-l-none rounded-r-md shadow-md placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
