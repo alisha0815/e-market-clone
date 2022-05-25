@@ -60,24 +60,38 @@ const Enter: NextPage = () => {
               </button>
             </div>
           </div>
-          <form>
-            <label>
+          <form className="mt-3">
+            <label className="text-sm font-medium text-gray-700">
               {method === "email" ? "Email address" : null}
               {method === "phone" ? "Phone number" : null}
             </label>
-            <div>
-              {method === "email" ? <input type="email" required /> : null}
+            <div className="mt-5">
+              {method === "email" ? (
+                <input
+                  type="email"
+                  required
+                  className="appearance-none w-full border border-gray-400 rounded-xl shadow-md placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+                /> //delete all default input properties
+              ) : null}
               {method === "phone" ? (
-                <div>
-                  <span>+47</span>
-                  <input type="number" required />
+                <div className="flex rounded-md shadow-sm">
+                  <span className="flex items-center justi px-3 rounded-l-md border border-gray-400 border-r-0 bg-gray-100 text-gray-600 select-none">
+                    +47
+                  </span>
+                  <input
+                    type="number"
+                    required
+                    className="appearance-none w-full border border-gray-400 rounded-l-none rounded-r-md shadow-md placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+                  />
                 </div>
               ) : null}
             </div>
-            <button>
-              {method === "email" ? "Get login link" : null}
-              {method === "phone" ? "Get one-time password" : null}
-            </button>
+            <div className="py-3 text-center">
+              <button className="bg-purple-700 text-white p-2 mt-2 w-full border-transparent rounded-md hover:opacity-80 hover:scale-105 shadow-sm text-sm font-medium focus:ring-2 focus:ring-offset-2 focus:ring-purple-700 focus:outline-none">
+                {method === "email" ? "Get login link" : null}
+                {method === "phone" ? "Get one-time password" : null}
+              </button>
+            </div>
           </form>
           <div>
             <div>
