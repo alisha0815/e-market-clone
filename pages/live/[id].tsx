@@ -94,17 +94,17 @@ const LiveDetail: NextPage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="fixed w-full mx-auto max-w-md bottom-5 inset-x-0">
-        <div className="relative flex items-center focus:ring-purple-700">
-          <input
-            type="text"
-            className="shadow-sm rounded-full w-full border-purple-600 focus:outline-none focus:ring-purple-700 focus:ring-offset-2 focus:border-purple-700 pr-12"
-          />
-          <div className="absolute inset-y-0 flex py-2 pr-2 right-0 text-gray-700">
-            <button className="flex items-center bg-purple-700 px-3 rounded-full text-white text-sm hover:opacity-90 cursor-pointer focus:ring-2 focus:ring-offset-2 focus:ring-purple-700">
-              &rarr;
-            </button>
+        <div className="fixed w-full mx-auto max-w-md bottom-5 inset-x-0">
+          <div className="relative flex items-center focus:ring-purple-700">
+            <input
+              type="text"
+              className="shadow-sm rounded-full w-full border-purple-600 focus:outline-none focus:ring-purple-700 focus:ring-offset-2 focus:border-purple-700 pr-12"
+            />
+            <div className="absolute inset-y-0 flex py-2 pr-2 right-0 text-gray-700">
+              <button className="flex items-center bg-purple-700 px-3 rounded-full text-white text-sm hover:opacity-90 cursor-pointer focus:ring-2 focus:ring-offset-2 focus:ring-purple-700">
+                &rarr;
+              </button>
+            </div>
           </div>
         </div>
       </div>
