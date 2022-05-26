@@ -1,31 +1,8 @@
-import { NextPage } from "next";
-import React from "react";
+import type { NextPage } from "next";
 
-const Upload: NextPage = () => {
+const Create: NextPage = () => {
   return (
-    <div className="px-10 py-16">
-      <div>
-        <div>
-          {/* trick to hide choose fine => input inside label */}
-          <label className="w-full flex items-center justify-center border-2 border-dashed border-gray-400 cursor-pointer h-48 rounded-md text-gray-600 hover:text-purple-700  hover:border-purple-700">
-            <svg
-              className="h-12 w-12 hover:scale-105 hover:opacity-90"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 48 48"
-              aria-hidden="true"
-            >
-              <path
-                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <input type="file" className="hidden" />
-          </label>
-        </div>
-      </div>
+    <div>
       <div className="mt-5">
         <label
           htmlFor="name"
@@ -78,10 +55,10 @@ const Upload: NextPage = () => {
         </div>
       </div>
       <button className="mt-5 w-full bg-purple-700 rounded-md text-white py-3 text-lg hover:opacity-90 transition-opacity hover:scale-105">
-        Upload product
+        UGo Live!
       </button>
     </div>
   );
 };
 
-export default Upload;
+export default Create;
