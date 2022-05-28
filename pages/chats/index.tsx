@@ -5,7 +5,7 @@ import { Layout } from "../../components/layout";
 const Chats: NextPage = () => {
   return (
     //   divide-y (bordern bottom except for the last)
-    <Layout title="Chats" hasTabBar={true}>
+    <Layout title="Chats" hasTabBar>
       <div className="py-2 divide-y-[1px] divide-gray-300 ">
         {[...Array(10)].map((_, i) => (
           <div
