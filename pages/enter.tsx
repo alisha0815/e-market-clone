@@ -3,14 +3,13 @@ import Head from "next/head";
 import Image from "next/image";
 import { cloneElement, useState } from "react";
 import Link from "next/link";
+import { cls } from "../libs/utils";
 
 const Enter: NextPage = () => {
   const [method, setMethod] = useState("email");
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
-  const cls = (...classnames: string[]) => {
-    return classnames.join(" ");
-  };
+
   return (
     <div className="bg-slate-200">
       <div className="min-h-screen ">

@@ -55,7 +55,7 @@ const Create: NextPage = () => {
         </div>
       </div>
       <button className="mt-5 w-full bg-purple-700 rounded-md text-white py-3 text-lg hover:opacity-90 transition-opacity hover:scale-105">
-        UGo Live!
+        Go Live!
       </button>
     </div>
   );
