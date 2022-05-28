@@ -13,7 +13,7 @@ const Home: NextPage = () => {
           <a>Login</a>
         </Link>
         <div className="flex flex-col space-y-5 py-10">
-          {[...Array(10)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <div
               key={i}
               className="flex border-b pb-4 cursor-pointer justify-between px-4"
