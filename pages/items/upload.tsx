@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import { Button } from "../../components/button";
 import { Layout } from "../../components/layout";
 
 const Upload: NextPage = () => {
@@ -79,9 +80,11 @@ const Upload: NextPage = () => {
             />
           </div>
         </div>
-        <button className="mt-5 w-full bg-purple-700 rounded-md text-white py-3 text-lg hover:opacity-90 transition-opacity hover:scale-105">
-          Upload product
-        </button>
+        <Button
+          large={true}
+          text="Upload product"
+          onClick={() => console.log("uploaded")}
+        />
       </div>
     </Layout>
   );

@@ -4,6 +4,8 @@ import Image from "next/image";
 import { cloneElement, useState } from "react";
 import Link from "next/link";
 import { cls } from "../libs/utils";
+import { Button } from "../components/button";
+import LinkButton from "../components/LinkButton";
 
 const Enter: NextPage = () => {
   const [method, setMethod] = useState("email");
@@ -25,38 +27,8 @@ const Enter: NextPage = () => {
               Enter using:
             </h5>
             <div className="grid grid-cols-2 gap-20 text-xl ">
-              <button
-                className={cls(
-                  "font-semibold border-b-2 w-full",
-                  method === "email"
-                    ? "border-purple-700 text-purple-700 pb-3"
-                    : "border-purple-300 text-purple-300"
-                )}
-                // className={`font-semibold border-b-2 w-full ${
-                //   method === "email"
-                //     ? "border-orange-500 text-orange-500 pb-3"
-                //     : "border-orange-200"
-                // } `}
-                onClick={onEmailClick}
-              >
-                Email
-              </button>
-              <button
-                className={cls(
-                  "font-semibold border-b-2 w-full",
-                  method === "phone"
-                    ? "border-purple-700 text-purple-700 pb-3"
-                    : "border-purple-300 text-purple-300"
-                )}
-                // className={`font-semibold border-b-2 w-full ${
-                //   method === "phone"
-                //     ? "border-orange-500 text-orange-500 pb-3"
-                //     : "border-orange-200"
-                // } `}
-                onClick={onPhoneClick}
-              >
-                Phone
-              </button>
+              <LinkButton text="Email" onClick={onEmailClick} isActive={true} />
+              <LinkButton text="Phone" onClick={onPhoneClick} isActive={true} />
             </div>
           </div>
           <form className="mt-3">
