@@ -5,7 +5,6 @@ import { cloneElement, useState } from "react";
 import Link from "next/link";
 import { cls } from "../libs/utils";
 import { Button } from "../components/button";
-import LinkButton from "../components/LinkButton";
 
 const Enter: NextPage = () => {
   const [method, setMethod] = useState("email");
@@ -27,8 +26,28 @@ const Enter: NextPage = () => {
               Enter using:
             </h5>
             <div className="grid grid-cols-2 gap-20 text-xl ">
-              <LinkButton text="Email" onClick={onEmailClick} isActive={true} />
-              <LinkButton text="Phone" onClick={onPhoneClick} isActive={true} />
+              <button
+                onClick={onEmailClick}
+                className={cls(
+                  "font-semibold border-b-2 w-full",
+                  method === "email"
+                    ? "border-purple-700 text-purple-700 pb-3"
+                    : "border-purple-300 text-purple-300"
+                )}
+              >
+                Email
+              </button>
+              <button
+                onClick={onPhoneClick}
+                className={cls(
+                  "font-semibold border-b-2 w-full",
+                  method === "phone"
+                    ? "border-purple-700 text-purple-700 pb-3"
+                    : "border-purple-300 text-purple-300"
+                )}
+              >
+                Phone
+              </button>
             </div>
           </div>
           <form className="mt-3">
@@ -63,10 +82,10 @@ const Enter: NextPage = () => {
               ) : null}
             </div>
             <div className="py-3 text-center">
-              <button className="bg-purple-700 text-white p-2 mt-2 w-full border-transparent rounded-md hover:opacity-80 hover:scale-105 shadow-sm text-sm font-medium focus:ring-2 focus:ring-offset-2 focus:ring-purple-700 focus:outline-none">
-                {method === "email" ? "Get login link" : null}
-                {method === "phone" ? "Get one-time password" : null}
-              </button>
+              {method === "email" ? <Button text="Get login link" /> : null}
+              {method === "phone" ? (
+                <Button text="Get one-time password" />
+              ) : null}
             </div>
             <div className="mt-4">
               <div className="relative">

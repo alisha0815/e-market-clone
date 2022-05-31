@@ -3,7 +3,7 @@ import { cls } from "../libs/utils";
 interface ButtonProps {
   large?: boolean;
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
   [key: string]: any;
 }
 
